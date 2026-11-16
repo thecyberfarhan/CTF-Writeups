@@ -1,6 +1,6 @@
 # CTF-Writeups
 
-![Writeups](https://img.shields.io/badge/-42%20writeups-B4232C?style=flat-square)
+![Writeups](https://img.shields.io/badge/-43%20writeups-B4232C?style=flat-square)
 ![TryHackMe](https://img.shields.io/badge/-TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)
 ![Hack The Box](https://img.shields.io/badge/-Hack%20The%20Box-9FEF00?style=flat-square&logo=hackthebox&logoColor=black)
 
@@ -73,6 +73,7 @@ If you only read three, read these. Each one shows a different part of how I wor
 | [UltraTech](TryHackme/ultratech_writeup.md) | ![Medium](https://img.shields.io/badge/-Medium-B4232C?style=flat-square) | Command injection in the `/ping` API route via a newline (`%0a`) | SQLite creds cracked, then `docker` group membership mounts the host as root | Client-side JavaScript is attack surface — `api.js` named the vulnerable route no directory scan would find. |
 | [w1seGuy](TryHackme/w1seguy_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | XOR known-plaintext attack recovers the key | Crypto challenge, no escalation | XOR is not encryption — it is a bitwise operation. |
 | [Watcher](TryHackme/watcher_writeup.md) | ![Medium](https://img.shields.io/badge/-Medium-B4232C?style=flat-square) | LFI to FTP credentials, shell upload | Six hops: `sudo php`, writable cron, writable Python module, RSA key in backups | Python's import resolution searches the script's local directory before system paths. |
+| [Wekor](TryHackme/wekor_writeup.md) | ![Hard](https://img.shields.io/badge/-Hard-7A1E24?style=flat-square) | Coupon SQLi dumps WordPress; cracked `wp_yura` hash → theme-editor reverse shell | memcached leaks Orka’s password; a sudo `bitcoin` binary calls `python` by relative name on a writable `secure_path` dir | When a root binary calls an interpreter by name, every writable directory on its PATH is a root shell. |
 | [Wgel CTF](TryHackme/wgel_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | SSH key in a browsable `.ssh` directory | `sudo wget` reads any file as root | `sudo wget` is not "just a download tool" — `--post-file` turns it into a root-powered file exfiltration… |
 
 ---
