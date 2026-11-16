@@ -1,6 +1,6 @@
 # CTF-Writeups
 
-![Writeups](https://img.shields.io/badge/-37%20writeups-B4232C?style=flat-square)
+![Writeups](https://img.shields.io/badge/-40%20writeups-B4232C?style=flat-square)
 ![TryHackMe](https://img.shields.io/badge/-TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)
 ![Hack The Box](https://img.shields.io/badge/-Hack%20The%20Box-9FEF00?style=flat-square&logo=hackthebox&logoColor=black)
 
@@ -68,6 +68,7 @@ If you only read three, read these. Each one shows a different part of how I wor
 | [Source](TryHackme/source_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | Webmin 1.890 backdoor (CVE-2019-15107) | None, root on the first shell | Supply-chain attacks are particularly insidious because they subvert trust at the source — downloading… |
 | [Team](TryHackme/team_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | `robots.txt` username, FTP credentials, LFI reads an SSH key | `sudo` script injection, writable root cron script | Virtual host enumeration is an underused but essential step — the entire attack surface of this box was… |
 | [tomghost](TryHackme/tomghost_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | Ghostcat AJP file read (CVE-2020-1938) | GPG key cracked, `sudo zip` | Always check exposed protocols, not just the headline application version — Ghostcat is a… |
+| [UltraTech](TryHackme/ultratech_writeup.md) | ![Medium](https://img.shields.io/badge/-Medium-B4232C?style=flat-square) | Command injection in the `/ping` API route via a newline (`%0a`) | SQLite creds cracked, then `docker` group membership mounts the host as root | Client-side JavaScript is attack surface — `api.js` named the vulnerable route no directory scan would find. |
 | [w1seGuy](TryHackme/w1seguy_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | XOR known-plaintext attack recovers the key | Crypto challenge, no escalation | XOR is not encryption — it is a bitwise operation. |
 | [Watcher](TryHackme/watcher_writeup.md) | ![Medium](https://img.shields.io/badge/-Medium-B4232C?style=flat-square) | LFI to FTP credentials, shell upload | Six hops: `sudo php`, writable cron, writable Python module, RSA key in backups | Python's import resolution searches the script's local directory before system paths. |
 | [Wgel CTF](TryHackme/wgel_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | SSH key in a browsable `.ssh` directory | `sudo wget` reads any file as root | `sudo wget` is not "just a download tool" — `--post-file` turns it into a root-powered file exfiltration… |
