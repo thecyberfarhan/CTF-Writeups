@@ -1,6 +1,6 @@
 # CTF-Writeups
 
-![Writeups](https://img.shields.io/badge/-41%20writeups-B4232C?style=flat-square)
+![Writeups](https://img.shields.io/badge/-42%20writeups-B4232C?style=flat-square)
 ![TryHackMe](https://img.shields.io/badge/-TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)
 ![Hack The Box](https://img.shields.io/badge/-Hack%20The%20Box-9FEF00?style=flat-square&logo=hackthebox&logoColor=black)
 
@@ -42,6 +42,7 @@ If you only read three, read these. Each one shows a different part of how I wor
 | [0day](TryHackme/0day_writeup.md) | ![Medium](https://img.shields.io/badge/-Medium-B4232C?style=flat-square) | Exposed SSH key and Shellshock through a CGI script | Kernel exploit CVE-2015-1328 (OverlayFS) | A `cgi-bin` directory on any server running a pre-2014 Bash is a Shellshock waiting to happen — always… |
 | [Anonforce](TryHackme/anonforce_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | Anonymous FTP serves the whole filesystem | GPG-protected shadow backup cracked with John and Hashcat | Anonymous FTP is almost never appropriate for production systems — but it's especially catastrophic when… |
 | [Anonymous](TryHackme/anonymous_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | Writable FTP scripts directory overwritten with a reverse shell | SUID `env` GTFOBins escape | A growing log file with repeated identical entries is direct evidence of a scheduled task — and a… |
+| [Anonymous Playground](TryHackme/anonymousplayground_writeup.md) | ![Medium](https://img.shields.io/badge/-Medium-B4232C?style=flat-square) | Cookie-gated page + a custom pair-cipher decodes to the SSH password | SUID `gets()` overflow (ret2win) to a second user, then tar wildcard cron to root | When a decoded hint is a whole sentence, the credential is the whole sentence — and a `do_system` SIGSEGV means stack alignment, not a wrong offset. |
 | [Basic Pentesting](TryHackme/basicpentesting_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | SMB enumeration with `enum4linux`, Hydra against SSH | Readable SSH key, passphrase cracked with John, pivot to a second user | A security audit that identifies a weak password but doesn't enforce remediation, combined with home… |
 | [Billing](TryHackme/billing_writeup.md) | ![Medium](https://img.shields.io/badge/-Medium-B4232C?style=flat-square) | Command injection in MagnusBilling `icepay.php` | `sudo fail2ban-client` with a custom ban action | Granting `sudo` access to a tool's *client* binary is not the same as granting access to only its "safe"… |
 | [Blog](TryHackme/blog_writeup.md) | ![Medium](https://img.shields.io/badge/-Medium-B4232C?style=flat-square) | WordPress 5.0 crop-image RCE (CVE-2019-8942) | SUID `checker` abused through an environment variable | Environment variables are entirely user-controlled — any user can set `admin=1` before running a command. |
