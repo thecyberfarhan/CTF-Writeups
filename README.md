@@ -1,6 +1,6 @@
 # CTF-Writeups
 
-![Writeups](https://img.shields.io/badge/-40%20writeups-B4232C?style=flat-square)
+![Writeups](https://img.shields.io/badge/-41%20writeups-B4232C?style=flat-square)
 ![TryHackMe](https://img.shields.io/badge/-TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)
 ![Hack The Box](https://img.shields.io/badge/-Hack%20The%20Box-9FEF00?style=flat-square&logo=hackthebox&logoColor=black)
 
@@ -62,6 +62,7 @@ If you only read three, read these. Each one shows a different part of how I wor
 | [Pickle Rick](TryHackme/picklerick_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | Credentials in a comment and `robots.txt`, command panel | None needed, all flags read through the panel | A command filter is only as strong as its list is complete — blocking `cat` while leaving `less`… |
 | [Publisher](TryHackme/publisher_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | SSH access with a leaked key | SUID `run_container` plus an AppArmor profile bypass | AppArmor profiles are only as strong as their coverage — a profile that restricts `ash` but doesn't… |
 | [Red](TryHackme/red_writeup.md) | ![Medium](https://img.shields.io/badge/-Medium-B4232C?style=flat-square) | LFI through `php://filter`, hashcat rules on a leaked password | Lateral move past a hostile user, SUID `pkexec` (PwnKit attempt) | A sanitization function that only runs once is functionally the same as no sanitization at all — always… |
+| [Relevant](TryHackme/relevant_writeup.md) | ![Medium](https://img.shields.io/badge/-Medium-B4232C?style=flat-square) | Anonymous SMB share leaks base64 credentials; writable share is also an IIS web root, so an ASPX shell runs | `SeImpersonatePrivilege` on the IIS app pool, PrintSpoofer to SYSTEM | A writable SMB share that is also a web root turns file-write into code execution — always check if the folder is served over HTTP. |
 | [RootMe](TryHackme/rootme_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | File upload filter bypass with `.phtml` | SUID `python2.7` | When reviewing SUID binaries, the question isn't "do I recognise this binary" — it's "should this binary… |
 | [Silver Platter](TryHackme/silverplatter_writeup.md) | ![Medium](https://img.shields.io/badge/-Medium-B4232C?style=flat-square) | CeWL wordlist and Hydra, Silverpeas IDOR | Password in `adm` group logs, `sudo su` | Passwords passed as command-line arguments are logged everywhere — `sudo` audit logs, shell history… |
 | [Simple CTF](TryHackme/simplectf_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | CMS Made Simple SQL injection (CVE-2019-9053) | `sudo vim` | Granting `sudo` access to any program that can run arbitrary commands — editors, interpreters, pagers… |
