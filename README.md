@@ -1,6 +1,6 @@
 # CTF-Writeups
 
-![Writeups](https://img.shields.io/badge/-44%20writeups-B4232C?style=flat-square)
+![Writeups](https://img.shields.io/badge/-45%20writeups-B4232C?style=flat-square)
 ![TryHackMe](https://img.shields.io/badge/-TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)
 ![Hack The Box](https://img.shields.io/badge/-Hack%20The%20Box-9FEF00?style=flat-square&logo=hackthebox&logoColor=black)
 
@@ -32,6 +32,7 @@ If you only read three, read these. Each one shows a different part of how I wor
 | [Archetype](HackTheBox/archetype_writeup.md) | ![Very Easy](https://img.shields.io/badge/-Very%20Easy-6d6a8c?style=flat-square) | Open SMB share leaks SQL Server credentials | `xp_cmdshell` reverse shell, then admin password in PowerShell history | `ConsoleHost_history.txt` is the Windows equivalent of `.bash_history` — and people are far less likely… |
 | [Cap](HackTheBox/cap_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | IDOR on `/data/<id>` exposes a PCAP with FTP credentials | `python3.8` with the `cap_setuid` capability | Linux capabilities are quieter than SUID bits and just as dangerous. |
 | [Oopsie](HackTheBox/oopsie_writeup.md) | ![Very Easy](https://img.shields.io/badge/-Very%20Easy-6d6a8c?style=flat-square) | Cookie IDOR reaches the admin upload form, PHP shell | Credentials in `db.php`, SUID binary hijacked through `PATH` | Authorization in web applications has to live on the server — never in a cookie the user controls. |
+| [Takeoff](HackTheBox/takeoff_writeup.md) | ![Hard](https://img.shields.io/badge/-Hard-7A1E24?style=flat-square) | SSTI in the ticket PDF leaks the HMAC signing token and an n8n API key | Forge a signed ticket whose `NotifyCmd` runs a shell, then the internal n8n `executeCommand` node runs as root | A valid signature proves who sent data, never that the data is safe to execute. |
 | [Unified](HackTheBox/unified_writeup.md) | ![Very Easy](https://img.shields.io/badge/-Very%20Easy-6d6a8c?style=flat-square) | Log4Shell (CVE-2021-44228) on UniFi 6.4.54 | Unauthenticated MongoDB admin hash swap, root SSH credentials in settings | Log4Shell is the cleanest example of why logging user-controlled input without sanitization is… |
 | [Vaccine](HackTheBox/vaccine_writeup.md) | ![Very Easy](https://img.shields.io/badge/-Very%20Easy-6d6a8c?style=flat-square) | Anonymous FTP ZIP, cracked hashes, SQL injection with `sqlmap --os-shell` | `sudo vi` GTFOBins escape | This box is a clean demonstration of credential chaining: each service exposes just enough information… |
 
