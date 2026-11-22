@@ -1,6 +1,6 @@
 # CTF-Writeups
 
-![Writeups](https://img.shields.io/badge/-45%20writeups-B4232C?style=flat-square)
+![Writeups](https://img.shields.io/badge/-46%20writeups-B4232C?style=flat-square)
 ![TryHackMe](https://img.shields.io/badge/-TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)
 ![Hack The Box](https://img.shields.io/badge/-Hack%20The%20Box-9FEF00?style=flat-square&logo=hackthebox&logoColor=black)
 
@@ -70,6 +70,7 @@ If you only read three, read these. Each one shows a different part of how I wor
 | [Silver Platter](TryHackme/silverplatter_writeup.md) | ![Medium](https://img.shields.io/badge/-Medium-B4232C?style=flat-square) | CeWL wordlist and Hydra, Silverpeas IDOR | Password in `adm` group logs, `sudo su` | Passwords passed as command-line arguments are logged everywhere — `sudo` audit logs, shell history… |
 | [Simple CTF](TryHackme/simplectf_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | CMS Made Simple SQL injection (CVE-2019-9053) | `sudo vim` | Granting `sudo` access to any program that can run arbitrary commands — editors, interpreters, pagers… |
 | [Source](TryHackme/source_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | Webmin 1.890 backdoor (CVE-2019-15107) | None, root on the first shell | Supply-chain attacks are particularly insidious because they subvert trust at the source — downloading… |
+| [Startup](TryHackme/startup_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | Anonymous-writable FTP served on the web, PHP reverse shell | Password in a leftover packet capture, then a world-writable script run by a root job | A writable upload folder that is also the webroot is remote code execution — never serve one as executable… |
 | [Team](TryHackme/team_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | `robots.txt` username, FTP credentials, LFI reads an SSH key | `sudo` script injection, writable root cron script | Virtual host enumeration is an underused but essential step — the entire attack surface of this box was… |
 | [tomghost](TryHackme/tomghost_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | Ghostcat AJP file read (CVE-2020-1938) | GPG key cracked, `sudo zip` | Always check exposed protocols, not just the headline application version — Ghostcat is a… |
 | [UltraTech](TryHackme/ultratech_writeup.md) | ![Medium](https://img.shields.io/badge/-Medium-B4232C?style=flat-square) | Command injection in the `/ping` API route via a newline (`%0a`) | SQLite creds cracked, then `docker` group membership mounts the host as root | Client-side JavaScript is attack surface — `api.js` named the vulnerable route no directory scan would find. |
