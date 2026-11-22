@@ -1,6 +1,6 @@
 # CTF-Writeups
 
-![Writeups](https://img.shields.io/badge/-46%20writeups-B4232C?style=flat-square)
+![Writeups](https://img.shields.io/badge/-47%20writeups-B4232C?style=flat-square)
 ![TryHackMe](https://img.shields.io/badge/-TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)
 ![Hack The Box](https://img.shields.io/badge/-Hack%20The%20Box-9FEF00?style=flat-square&logo=hackthebox&logoColor=black)
 
@@ -54,6 +54,7 @@ If you only read three, read these. Each one shows a different part of how I wor
 | [Chill Hack](TryHackme/chillhack_writeup.md) | ![Medium](https://img.shields.io/badge/-Medium-B4232C?style=flat-square) | Command filter bypass with `find -exec`, steghide ZIP | Writable Docker socket, host filesystem mounted | Access to the Docker socket is equivalent to root access on the host — there is no meaningful… |
 | [Cyber Heroes](TryHackme/cyberheros_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | Credentials hardcoded in client-side JavaScript | None needed | Anything that runs in the browser is readable by the user — no amount of string reversal, obfuscation… |
 | [Cyborg](TryHackme/cyborg_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | Exposed Squid config, cracked hash, BorgBackup archive | `sudo` backup script command injection | Credential reuse across services is a force multiplier for attackers — one cracked hash unlocked both… |
+| [Enterprise](TryHackme/enterprise_writeup.md) | ![Hard](https://img.shields.io/badge/-Hard-B4232C?style=flat-square) | Sprayed Guest creds, a password leaked in a public GitHub repo, then Kerberoasting | RDP as the cracked service account, then an insecure-permissions service binary run as SYSTEM | AD compromise is the sum of small trust mistakes: a weak password, a secret in source control, a roastable SPN, and a world-writable service. |
 | [Fowsniff CTF](TryHackme/fowsniff_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | Leaked MD5 dump found through OSINT, POP3 inbox | World-writable script run as root on SSH login | OSINT isn't just a pre-engagement formality — sometimes it hands you the entire credential set before… |
 | [Ignite](TryHackme/ignite_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | Fuel CMS 1.4.1 RCE (CVE-2018-16763) | MySQL password reused as the root password | When a discovered credential fails against `sudo`, try it against `su` before discarding it — the two… |
 | [Lian Yu](TryHackme/lianyu_writeup.md) | ![Medium](https://img.shields.io/badge/-Medium-B4232C?style=flat-square) | Custom extension discovery with Feroxbuster, steghide | `sudo pkexec` | Enumeration isn't just running the same tools with the same flags every time — Lian Yu's key step was… |
