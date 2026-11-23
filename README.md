@@ -1,6 +1,6 @@
 # CTF-Writeups
 
-![Writeups](https://img.shields.io/badge/-49%20writeups-B4232C?style=flat-square)
+![Writeups](https://img.shields.io/badge/-50%20writeups-B4232C?style=flat-square)
 ![TryHackMe](https://img.shields.io/badge/-TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)
 ![Hack The Box](https://img.shields.io/badge/-Hack%20The%20Box-9FEF00?style=flat-square&logo=hackthebox&logoColor=black)
 
@@ -62,6 +62,7 @@ If you only read three, read these. Each one shows a different part of how I wor
 | [Mr Robot CTF](TryHackme/mrrobot_writeup.md) | ![Medium](https://img.shields.io/badge/-Medium-B4232C?style=flat-square) | `robots.txt` wordlist, Hydra, WordPress theme editor shell | SUID `nmap` interactive mode | Always deduplicate custom wordlists before feeding them to Hydra — 858,160 entries shrunk to 11,451 is a… |
 | [Mustacchio](TryHackme/mustacchio_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | Exposed SQLite backup, XXE reads an SSH key | SUID binary hijacked through `PATH` | XXE is not just an academic vulnerability — when a web application parses XML and reflects the output, a… |
 | [Neighbour](TryHackme/neighbour_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | Guest credentials in an HTML comment, IDOR on `?user=` | None needed | A session cookie proves you're *logged in* — it doesn't automatically prove you're allowed to access… |
+| [Operation Endgame](TryHackme/operationendgame_writeup.md) | ![Hard](https://img.shields.io/badge/-Hard-7A1E24?style=flat-square) | Credential-less Kerberoasting via an AS-REP-roastable account, then a sprayed password reused across users | A `GenericWrite` ACL edge turns a non-SPN account into a Kerberoastable one, leading to a plaintext Domain Admin password in a scheduled sync script | Treat BloodHound's ACL edges as the real map of the domain — a harmless-sounding group name and a write permission on an ordinary user are not the same risk. |
 | [Overpass](TryHackme/overpass_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | Client-side auth bypass with a forged cookie, SSH key cracked | Root cron job running `curl | bash` with a writable `/etc/hosts` | Broken authentication doesn't need to be subtle to be devastating — here it was "the server trusts a… |
 | [Pickle Rick](TryHackme/picklerick_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | Credentials in a comment and `robots.txt`, command panel | None needed, all flags read through the panel | A command filter is only as strong as its list is complete — blocking `cat` while leaving `less`… |
 | [Publisher](TryHackme/publisher_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | SSH access with a leaked key | SUID `run_container` plus an AppArmor profile bypass | AppArmor profiles are only as strong as their coverage — a profile that restricts `ash` but doesn't… |
