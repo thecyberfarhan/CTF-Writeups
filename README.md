@@ -1,6 +1,6 @@
 # CTF-Writeups
 
-![Writeups](https://img.shields.io/badge/-48%20writeups-B4232C?style=flat-square)
+![Writeups](https://img.shields.io/badge/-49%20writeups-B4232C?style=flat-square)
 ![TryHackMe](https://img.shields.io/badge/-TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)
 ![Hack The Box](https://img.shields.io/badge/-Hack%20The%20Box-9FEF00?style=flat-square&logo=hackthebox&logoColor=black)
 
@@ -52,6 +52,7 @@ If you only read three, read these. Each one shows a different part of how I wor
 | [Brooklyn Nine-Nine](TryHackme/brooklynninenine_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | Anonymous FTP hint, steganography cracked with `stegseek` | `sudo less` GTFOBins escape | A correct password attached to a guessed username is indistinguishable from a wrong password until you… |
 | [Brute It](TryHackme/bruteit_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | Hydra on the admin panel, encrypted SSH key cracked | `sudo cat` reads `/etc/shadow`, root hash cracked | `sudo cat` is not a safe alternative to `sudo vim` or `sudo bash` — the ability to read any file as root… |
 | [Chill Hack](TryHackme/chillhack_writeup.md) | ![Medium](https://img.shields.io/badge/-Medium-B4232C?style=flat-square) | Command filter bypass with `find -exec`, steghide ZIP | Writable Docker socket, host filesystem mounted | Access to the Docker socket is equivalent to root access on the host — there is no meaningful… |
+| [Different CTF](TryHackme/differentctf_writeup.md) | ![Hard](https://img.shields.io/badge/-Hard-7A1E24?style=flat-square) | Stego-cracked FTP creds; every direct RCE route blocked until pivoting into a co-hosted subdomain's database | `sucrack` brute-forces a system user from a reused password pattern, then `ltrace` recovers a SUID binary's hardcoded password to copy out an image hiding root's password in plain hex | When every standard RCE route is blocked, question the model of the target — the fix was realizing two sites shared one filesystem, not a cleverer shell. |
 | [Cyber Heroes](TryHackme/cyberheros_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | Credentials hardcoded in client-side JavaScript | None needed | Anything that runs in the browser is readable by the user — no amount of string reversal, obfuscation… |
 | [Cyborg](TryHackme/cyborg_writeup.md) | ![Easy](https://img.shields.io/badge/-Easy-2f5f8a?style=flat-square) | Exposed Squid config, cracked hash, BorgBackup archive | `sudo` backup script command injection | Credential reuse across services is a force multiplier for attackers — one cracked hash unlocked both… |
 | [Enterprise](TryHackme/enterprise_writeup.md) | ![Hard](https://img.shields.io/badge/-Hard-B4232C?style=flat-square) | Sprayed Guest creds, a password leaked in a public GitHub repo, then Kerberoasting | RDP as the cracked service account, then an insecure-permissions service binary run as SYSTEM | AD compromise is the sum of small trust mistakes: a weak password, a secret in source control, a roastable SPN, and a world-writable service. |
